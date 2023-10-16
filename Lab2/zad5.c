@@ -1,22 +1,26 @@
+// Copyright: 2023 Jakub Korytko
+// LINT_C_FILE
+
 #include <stdio.h>
 #include <math.h>
 
-short biggestShort()
-{
+// we want to find the biggest short
+// so we need to silent the warning
+
+// NOLINTNEXTLINE(runtime/int)
+short biggestShort() {
+    // NOLINTNEXTLINE(runtime/int)
     short x = 0;
     int k;
 
-    for (k = 0; k == x; k++)
-    {
+    for (k = 0; k == x; k++) {
         x++;
     }
 
     return (k - 1);
 }
 
-int biggestInt()
-{
-
+int biggestInt() {
     int l = 0;
     int m = 0;
     int p = 0;
@@ -25,33 +29,29 @@ int biggestInt()
     int y = 0;
     double k = 0;
 
-    for (k = 0; k == y; l++)
-    {
+    for (k = 0; k == y; l++) {
         k = ceil(pow(10, l));
         y = k;
     }
 
-    for (l = l - 2; l >= 0; l--)
-    {
+    for (l = l - 2; l >= 0; l--) {
         n = 0;
         m = 0;
         p = 0;
-        while (m == n)
-        {
+        while (m == n) {
             p++;
             n = final + p * ceil(pow(10, l));
             m = n;
         }
 
         final += (p - 1) * ceil(pow(10, l));
-
     }
 
     return final;
 }
 
 float smallestFloat() {
-       float fl, last, last_b, power;
+    float fl, last, last_b, power;
     double db, lastdb, lastdb_b, power_b;
     fl = 0;
     power = 1;
@@ -69,12 +69,17 @@ float smallestFloat() {
     return last_b;
 }
 
-int main()
-{
+int main() {
+    printf(
+    "Max short: %d, "
+    "max int: %d, "
+    "max float: %.10e, "
+    "min float: %.10e",
 
-    printf("Max short: %d, max int: %d, max float: %.10e, min float: %.10e", 
-    biggestShort(), biggestInt(), nextafterf(INFINITY,0), smallestFloat());
+    biggestShort(),
+    biggestInt(),
+    nextafterf(INFINITY, 0),
+    smallestFloat());
+
     return 0;
 }
-
-

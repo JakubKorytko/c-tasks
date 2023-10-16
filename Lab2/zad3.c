@@ -1,3 +1,5 @@
+// Copyright: 2023 Jakub Korytko
+
 #include <stdio.h>
 
 double objetosc(double a, double b, double c) {
@@ -9,8 +11,9 @@ double pole(double a, double b, double c) {
 }
 
 int main() {
-
-    double a; double b; double c;
+    double a;
+    double b;
+    double c;
 
     printf("Podaj a: ");
     scanf("%lf", &a);
@@ -21,9 +24,8 @@ int main() {
     printf("Podaj c: ");
     scanf("%lf", &c);
 
-    printf("Objetosc: %lf\n", objetosc(a,b,c));
-    printf("Pole powierzchni calkowitej: %lf\n", pole(a,b,c));
+    printf("Objetosc: %lf\n", objetosc(a, b, c));
+    printf("Pole powierzchni calkowitej: %lf\n", pole(a, b, c));
 
     return 0;
-
 }

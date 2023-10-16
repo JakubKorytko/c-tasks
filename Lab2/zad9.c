@@ -1,8 +1,10 @@
+// Copyright: 2023 Jakub Korytko
+#define _USE_MATH_DEFINES
+
 #include <stdio.h>
 #include <math.h>
 
-double kwadrat()
-{
+double kwadrat() {
     double a;
 
     printf("\nPodaj bok kwadratu: ");
@@ -11,8 +13,7 @@ double kwadrat()
     return 4 * a;
 }
 
-double kolo()
-{
+double kolo() {
     double r;
 
     printf("\nPodaj promien kola: ");
@@ -21,8 +22,7 @@ double kolo()
     return M_PI * pow(r, 2);
 }
 
-double trojkat()
-{
+double trojkat() {
     double a;
     double h;
 
@@ -35,32 +35,28 @@ double trojkat()
     return (1.0 / 2) * a * h;
 }
 
-int main()
-{
-
+int main() {
     int p = 0;
 
-    while (p != 4)
-    {
-        printf("\nOblicz pole:\n1. Trojkata\n2. Kwadratu\n3. Kola\n4. Koniec\n\n(Wpisz odpowiedni numer oraz potwierdz enterem) Wybor: ");
+    while (p != 4) {
+        printf("\nOblicz pole:\n"
+        "1. Trojkata\n"
+        "2. Kwadratu\n"
+        "3. Kola\n"
+        "4. Koniec\n\n"
+        "(Wpisz odpowiedni numer oraz potwierdz enterem) "
+        "Wybor: ");
+
         scanf("%d", &p);
 
-        if (p == 1)
-        {
+        if (p == 1) {
             printf("\nPole trojkata wynosi %lf\n", trojkat());
-        }
-        else if (p == 2)
-        {
+        } else if (p == 2) {
             printf("\nPole kwadratu wynosi %lf\n", kwadrat());
-        }
-        else if (p == 3)
-        {
+        } else if (p == 3) {
             printf("\nPole kola wynosi %lf\n", kolo());
-        }
-        else
-        {
-            if (p != 4)
-            {
+        } else {
+            if (p != 4) {
                 printf("\nWybrano zla opcje");
             }
         }
