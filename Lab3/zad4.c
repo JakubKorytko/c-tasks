@@ -1,26 +1,27 @@
+// Copyright: 2023 Jakub Korytko
+
 #include <stdio.h>
 #include <math.h>
 
 int main() {
+    int x;
 
-	int x;
+    printf("Podaj liczbe do sprawdzenia: ");
+    scanf("%d", &x);
 
-	printf("Podaj liczbe do sprawdzenia: ");
-	scanf("%d", &x);
+    int y = 1;
 
-	int y=1;
+    for (int i = 2; i < sqrt(x); i++) {
+        if (x % i == 0) {
+            y = 0;
+        }
+    }
 
-	for (int i=2; i<sqrt(x); i++) {
-		if (x%i==0) {
-			y=0;
-		}
-	}
+    if (y == 1 && x > 1) {
+        printf("Liczba %d jest liczba pierwsza", x);
+    } else {
+        printf("Liczba %d nie jest liczba pierwsza", x);
+    }
 
-	if (y==1 && x>1) {
-		printf("Liczba %d jest liczba pierwsza", x);
-	} else {
-		printf("Liczba %d nie jest liczba pierwsza", x);
-	}
-
-	return 0;
+    return 0;
 }

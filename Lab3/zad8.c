@@ -1,46 +1,47 @@
+// Copyright: 2023 Jakub Korytko
+// LINT_C_FILE
+
 #include <stdio.h>
 #include <math.h>
 
-
-float geo_avg(int numbers[], int n) {
-	
-	int x = 1;
-
-	for (int i=0; i<n; i++) {
-		x*=numbers[i];
-	}
-
-	return pow(x, 1/(float)n);
-}
-
-float ar_avg(int numbers[], int n) {
-
-	int x = 0;
-
-	for (int i=0; i<n; i++) {
-		x+=numbers[i];
-	}
-
-	return x/(float)n;
-}
-
 int main() {
+    int n;
+    int m = 0;
 
-	int n;
-	int m=0;
+    int res;
 
-	printf("Podaj ilosc liczb: ");
-	scanf("%d", &n);
+    while (1) {
+        printf("Podaj ilosc liczb: ");
+        res = scanf("%d", &n);
 
-	int numbers[n];
+        if (res == 1 && n > 0) {
+            printf("\n");
+            break;
+        } else {
+            while (getchar() != '\n') {
+                continue;
+            }
 
-	for (int i=0; i<n; i++) {
-		printf("Podaj %d liczbe: ", i+1);
-		scanf("%d", &m);
-		numbers[i]=m;
-	}
-	
-	printf("Srednia geometryczna: %f, arytmetyczna: %f", geo_avg(numbers, n), ar_avg(numbers, n));
-	return 0;
+            printf("\nPodaj liczbe naturalna\n\n");
+        }
+    }
 
+    int geo = 1;
+    int ar = 0;
+
+    for (int i = 0; i < n; i++) {
+        printf("Podaj %d liczbe: ", i+1);
+        scanf("%d", &m);
+        geo *= m;
+        ar += m;
+    }
+
+    float geo_avg = pow(geo, 1 / (float)n);
+    float ar_avg = ar/(float)n;
+
+    printf("Srednia geometryczna: %f, "
+    "arytmetyczna: %f",
+    geo_avg, ar_avg);
+
+    return 0;
 }
