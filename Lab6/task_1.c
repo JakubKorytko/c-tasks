@@ -4,7 +4,7 @@
 
 int main() {
     FILE *fp;
-    fp = fopen("zad1.txt", "w");
+    fp = fopen("task_1.txt", "w");
 
     for (int i = 0; i < 5; i++) {
         int x;
@@ -17,7 +17,7 @@ int main() {
     }
 
     fclose(fp);
-    fp = fopen("zad1.txt", "r");
+    fp = fopen("task_1.txt", "r");
 
     printf("\n\nWczytane z pliku liczby: ");
 

@@ -7,7 +7,7 @@ int main() {
     char x[100];
 
     FILE *fp;
-    fp = fopen("zad2.txt", "w");
+    fp = fopen("task_2.txt", "w");
 
     printf("Podaj ciag znakow do zapisania w pliku: ");
 

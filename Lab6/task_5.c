@@ -11,7 +11,7 @@ int main() {
     }
 
     FILE *fp;
-    fp = fopen("zad3-5_DATA.txt", "r");
+    fp = fopen("task_3-5_DATA.txt", "r");
 
     while (1) {
         int x = tolower(fgetc(fp));
