@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include <math.h>
 
-// +---------------+
-// | Projekt nr 17 |
-// +---------------+
+// +----------------+
+// | Project No. 17 |
+// +----------------+
 
-double szereg(double x) {
+double series(double x) {
     double s = 1, w = 1;
     for (int i = 1; i <= 100; i++) {
         w *= -x * x / (2 * i * (2 * i - 1));
@@ -21,26 +21,26 @@ int main() {
     char table[31] = " ----------------------------\n";
     double a, b, k, x;
 
-    printf("Przedzial to ( |x| < nieskonczonosc )\n");
+    printf("The range is  ( |x| < infinity )\n");
 
-    printf("Podaj poczatek przedzialu: ");
+    printf("Enter the start of the range: ");
     scanf("%lf", &a);
 
-    printf("Podaj koniec przedzialu: ");
+    printf("Enter the end of the range: ");
     scanf("%lf", &b);
 
-    printf("Podaj liczbe podprzedzialow: ");
+    printf("Enter the number of subdivisions: ");
     scanf("%d", &c);
 
     k = (b - a) / c;
 
-    printf("Krok = %.2lf\n\n", k);
+    printf("Step = %.2lf\n\n", k);
     printf("%s", table);
-    printf("       x  szereg(x) cos(x)\n");
+    printf("       x  series(x) cos(x)\n");
     printf("%s", table);
 
     for (x = a; x <= b; x += k) {
-        printf("%10.2lf %7.4lf %7.4lf\n", x, szereg(x), cos(x));
+        printf("%10.2lf %7.4lf %7.4lf\n", x, series(x), cos(x));
     }
 
     printf("%s", table);

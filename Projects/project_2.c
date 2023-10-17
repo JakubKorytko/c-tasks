@@ -4,7 +4,7 @@
 #include <math.h>
 
 // +-----------+
-// | Projekt L |
+// | Project L |
 // +-----------+
 
 int sum(int x) {
@@ -31,11 +31,11 @@ int sum(int x) {
 int main() {
     int koniec = 0, k = 0, l = 1, c = 0;
 
-    printf("Podaj wartosc koncowa: ");
+    printf("Enter the end value: ");
     scanf("%d", &koniec);
 
     do {
-        printf("Podaj %d element: ", l);
+        printf("Specify the %d element: ", l);
         scanf("%d", &k);
         if (k < koniec && k >= 10 && k < 1000 && sum(k) % 2 != 0) {
             c++;
@@ -43,7 +43,7 @@ int main() {
         l += 1;
     } while (k < koniec);
 
-    printf("Liczba elementow spelniajacych warunek: %d", c);
+    printf("Number of elements satisfying the condition: %d", c);
 
     return 0;
 }
