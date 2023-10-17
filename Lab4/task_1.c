@@ -8,7 +8,7 @@ int main() {
     int a[size], b[size];
 
     for (int i = 0; i < size; i++) {
-        printf("Podaj %d element tablicy: ", i+1);
+        printf("Enter the %d element of the array: ", i+1);
         scanf("%d", &a[i]);
     }
 

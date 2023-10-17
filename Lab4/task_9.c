@@ -22,20 +22,20 @@ int main() {
     char string[StringMaxLength];
     int choice = 0;
 
-    printf("Podaj ciag znakow: ");
+    printf("Enter a string of characters: ");
     fgets(string, StringMaxLength, stdin);
     string[strcspn(string, "\r\n")] = 0;
 
     printf(
-    "Wybierz opcje z menu:\n\n"
-    "1. Szyfrowanie\n"
-    "2. Deszyfrowanie\n\n"
-    "Wybor: ");
+    "Select an option from the menu:\n\n"
+    "1. Encryption\n"
+    "2. Decryption\n\n"
+    "Choice: ");
 
     scanf("%d", &choice);
 
     if (choice != 1 && choice != 2) {
-        printf("Wybrano zla opcje.\n");
+        printf("Wrong choice.\n");
         return 0;
     }
     int string_length = strlen(string);
@@ -43,9 +43,9 @@ int main() {
     int p = 0;
 
     if (choice == 1) {
-        printf("Zaszyfrowany kazdy z wyrazow: ");
+        printf("Each word encrypted: ");
     } else {
-        printf("Odszyfrowany kazdy z wyrazow: ");
+        printf("Each word decrypted: ");
     }
 
     for (int i = 0; i < string_length; i++) {

@@ -10,12 +10,12 @@ int main() {
     int *arr = (int *)malloc(size * sizeof(int));
 
     if (!arr) {
-        printf("Blad alokacji pamieci");
+        printf("Failed to allocate memory");
         return 1;
     }
 
     for (int i = 0; i < size; i++) {
-        printf("Podaj %d element tablicy: ", i + 1);
+        printf("Enter the %d element of the array: ", i + 1);
         scanf("%d", &arr[i]);
     }
 

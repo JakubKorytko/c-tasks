@@ -8,7 +8,7 @@
 int main() {
     char string[StringMaxLength];
 
-    printf("Podaj ciag znakow: ");
+    printf("Enter a string of characters: ");
     fgets(string, StringMaxLength, stdin);
     string[strcspn(string, "\r\n")] = 0;
 
@@ -16,7 +16,7 @@ int main() {
 
     int p = 0;
 
-    printf("Odwrocony kazdy z wyrazow: ");
+    printf("Each word reversed: ");
 
     for (int i = 0; i < string_length; i++) {
         if (string[i] == ' ' || i == string_length-1) {

@@ -20,7 +20,7 @@ int numberLength(
 int main() {
     int x;
 
-    printf("Podaj liczbe: ");
+    printf("Enter the number: ");
     scanf("%d", &x);
 
     int size = numberLength(x);
@@ -40,11 +40,11 @@ int main() {
 
     int halfSize = size / 2;
 
-    char *res_string = "Liczba jest palindromem";
+    char *res_string = "The number is a palindrome";
 
     for (int i = 0; i < halfSize; i++) {
         if (arr[i] != arr[size - i - 1]) {
-            res_string = "Liczba nie jest palindromem";
+            res_string = "The number is not a palindrome";
         }
     }
 

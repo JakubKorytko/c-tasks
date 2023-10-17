@@ -18,7 +18,7 @@ int main() {
     int a[size], b[size];
 
     for (int i = 0; i < size; i++) {
-        printf("Podaj %d element tablicy: ", i + 1);
+        printf("Enter the %d element of the array: ", i + 1);
         scanf("%d", &a[i]);
 
         if (isPresent(a, i, a[i]) == 1 && isPresent(b, i, a[i]) == 0) {
@@ -28,7 +28,7 @@ int main() {
     }
 
     if (j != 0) {
-        printf("Powtarzajace sie elementy: ");
+        printf("Repeating elements: ");
 
         for (int i = 0; i < j; i++) {
             if (i != (j-1)) {
@@ -38,7 +38,7 @@ int main() {
             }
         }
     } else {
-        printf("Brak powtarzajacych sie elementow");
+        printf("No repeating elements");
     }
 
     return 0;

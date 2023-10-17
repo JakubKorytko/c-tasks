@@ -50,7 +50,7 @@ int numberIntoArray(int size, LL number) {
             alreadyPrintedNumbers[j] = num;
             j++;
             if (isFirstPresentOccurence == 0) {
-                printf("Powtarzajace sie cyfry: ");
+                printf("Repeated digits: ");
                 isFirstPresentOccurence = 1;
             } else {
                 printf(", ");
@@ -80,7 +80,7 @@ int numberIntoArray(int size, LL number) {
 int main() {
     LL x;
 
-    printf("Podaj liczbe: ");
+    printf("Enter the number: ");
     scanf("%lld", &x);
 
     printf("\n%lld\n", x);
@@ -88,6 +88,6 @@ int main() {
     int res = numberIntoArray(numberLength(x), x);
 
     if (res) {
-        printf("Cyfry sa rozne");
+        printf("The numbers are different");
     }
 }
