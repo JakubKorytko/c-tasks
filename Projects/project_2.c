@@ -29,19 +29,19 @@ int sum(int x) {
 }
 
 int main() {
-    int koniec = 0, k = 0, l = 1, c = 0;
+    int end = 0, k = 0, l = 1, c = 0;
 
     printf("Enter the end value: ");
-    scanf("%d", &koniec);
+    scanf("%d", &end);
 
     do {
         printf("Specify the %d element: ", l);
         scanf("%d", &k);
-        if (k < koniec && k >= 10 && k < 1000 && sum(k) % 2 != 0) {
+        if (k < end && k >= 10 && k < 1000 && sum(k) % 2 != 0) {
             c++;
         }
         l += 1;
-    } while (k < koniec);
+    } while (k < end);
 
     printf("Number of elements satisfying the condition: %d", c);
 
