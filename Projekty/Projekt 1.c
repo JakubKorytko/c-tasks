@@ -1,3 +1,5 @@
+// Copyright: 2023 Jakub Korytko
+
 #include <stdio.h>
 #include <math.h>
 
@@ -5,19 +7,16 @@
 // | Projekt nr 17 |
 // +---------------+
 
-double szereg(double x)
-{
+double szereg(double x) {
     double s = 1, w = 1;
-    for (int i = 1; i <= 100; i++)
-    {
+    for (int i = 1; i <= 100; i++) {
         w *= -x * x / (2 * i * (2 * i - 1));
         s += w;
     }
     return s;
 }
 
-int main()
-{
+int main() {
     int c;
     char table[31] = " ----------------------------\n";
     double a, b, k, x;
@@ -40,8 +39,7 @@ int main()
     printf("       x  szereg(x) cos(x)\n");
     printf("%s", table);
 
-    for (x = a; x <= b; x += k)
-    {
+    for (x = a; x <= b; x += k) {
         printf("%10.2lf %7.4lf %7.4lf\n", x, szereg(x), cos(x));
     }
 
