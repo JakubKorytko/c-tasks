@@ -152,13 +152,14 @@ int main() {
     char b[100];
     char ch[100] = {};
 
-    printf("Podaj skladniki sumy oddzielone spacja w systemie rzymskim "
-    "z przedzialu <1, 1000>: ");
+    printf("Enter the components of the sum "
+    "separated by a space in the Roman system "
+    "from the range <1, 1000> ");
 
     scanf("%s %s", &a, &b);
 
     if (isValid(a) == -1 || isValid(b) == -1) {
-        printf("\nPodano liczbe w blednym formacie");
+        printf("\nA number was entered in the wrong format");
         return 1;
     }
 
@@ -166,8 +167,8 @@ int main() {
     int b_num = convertFrom(b);
 
     if (a_num < 1 || a_num > 1000 || b_num < 1 || b_num > 1000) {
-        printf("\nPodano liczbe z blednego przedzial "
-        "lub niepoprawny system rzymski");
+        printf("\nYou entered a number from the wrong range"
+         "or incorrect Roman system");
 
         return 1;
     }
@@ -176,7 +177,7 @@ int main() {
 
     convertToRoman(ch, sum);
 
-    printf("Wynik dodawania %s + %s:\n", a, b);
+    printf("The result of %s + %s:\n", a, b);
     printf("%s", ch);
 
     return 1;

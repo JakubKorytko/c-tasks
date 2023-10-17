@@ -28,16 +28,16 @@ int main() {
     unsigned int seed = time(NULL);
 
     LL k, n;
-    printf("Podaj dokladnosc testu: ");
+    printf("Provide test accuracy: ");
     scanf("%lld", &k);
-    printf("Podaj liczbe (nieparzysta) do sprawdzenia: ");
+    printf("Enter a (odd) number to check: ");
     scanf("%lld", &n);
 
     if ((n % 2 == 0 && n != 2) || n == 1) {
-        printf("Liczba nie jest pierwsza");
+        printf("The number is not prime");
         return 1;
     } else if (n == 2) {
-        printf("Liczba jest pierwsza");
+        printf("The number is prime");
         return 1;
     }
 
@@ -50,7 +50,7 @@ int main() {
     }
 
     if (s > 64) {
-        printf("Liczba jest zbyt duza");
+        printf("The number is too large");
         return 1;
     }
 
@@ -71,13 +71,13 @@ int main() {
                 }
             }
             if (z == 0) {
-                printf("Liczba nie jest pierwsza");
+                printf("The number is not prime");
                 return 1;
             }
         }
     }
 
-    printf("Liczba jest prawdopodobnie pierwsza");
+    printf("The number is probably prime");
 
     return 1;
 }

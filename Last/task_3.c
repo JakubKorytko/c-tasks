@@ -48,11 +48,13 @@ int main() {
     }
 
     // if (t>25 || t<0) {
-    //     printf("Zla ilosc ciagow (nie moze byc ujemna ani wieksza niz 25)");
+    //     printf("Wrong number of strings
+    //     (cannot be negative or greater than 25)");
     // }
 
     // if (s>25 || s<0) {
-    //     printf("Zla ilosc liter (nie moze byc ujemna ani wieksza niz 25)");
+    //     printf("Wrong number of letters
+    //     (cannot be negative or greater than 25)");
     // }
 
     for (int i = 0; i < t; i++) {
@@ -82,7 +84,7 @@ int main() {
                 }
             }
         } else {
-            strncpy(words[i], "NIECZYTELNE", 25);
+            strncpy(words[i], "ILLEGIBLE", 25);
         }
 
         if (arr) {
