@@ -7,7 +7,7 @@ int main() {
     fp = fopen("task_3-5_DATA.txt", "r");
 
     fseek(fp, 0, SEEK_END);
-    printf("Ilosc znakow w pliku task_3-5_DATA.txt: %d", ftell(fp));
+    printf("Number of characters in file task_3-5_DATA.txt: %d", ftell(fp));
 
     fclose(fp);
 

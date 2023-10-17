@@ -8,7 +8,7 @@ int main() {
 
     for (int i = 0; i < 5; i++) {
         int x;
-        printf("Podaj %d liczbe do zapisania w pliku: ", i+1);
+        printf("Enter the %d number to save in the file: ", i+1);
         scanf("%d", &x);
         fprintf(fp, "%d", x);
         if (i != 4) {
@@ -19,7 +19,7 @@ int main() {
     fclose(fp);
     fp = fopen("task_1.txt", "r");
 
-    printf("\n\nWczytane z pliku liczby: ");
+    printf("\n\nNumbers read from a file: ");
 
     while (1) {
         char c = fgetc(fp);

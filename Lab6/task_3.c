@@ -20,8 +20,8 @@ int main() {
     fclose(fp);
     fclose(fp2);
 
-    printf("Plik zostal przekopiowany z pliku task_3-5_DATA.txt "
-    "do pliku task_3.txt");
+    printf("The file was copied from the file task_3-5_DATA.txt "
+    "to the file task_3.txt");
 
     return 1;
 }

@@ -9,7 +9,7 @@ int main() {
     FILE *fp;
     fp = fopen("task_2.txt", "w");
 
-    printf("Podaj ciag znakow do zapisania w pliku: ");
+    printf("Enter a string of characters to save in the file: ");
 
     fgets(x, 100, stdin);
 
