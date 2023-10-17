@@ -5,13 +5,13 @@
 int main() {
     int a;
 
-    printf("Podaj liczbe: ");
+    printf("Enter the number: ");
     scanf("%d", &a);
 
     if (a%2 == 0) {
-        printf("Parzysta");
+        printf("Even");
     } else {
-        printf("Nieparzysta");
+        printf("Odd");
     }
 
     return 0;

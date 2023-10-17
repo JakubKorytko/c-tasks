@@ -16,13 +16,13 @@ int main() {
     double mi;
     double sigma;
 
-    printf("Podaj x: ");
+    printf("Enter 'x': ");
     scanf("%lf", &x);
 
-    printf("Podaj mi: ");
+    printf("Enter 'mi': ");
     scanf("%lf", &mi);
 
-    printf("Podaj sigme: ");
+    printf("Enter 'sigma': ");
     scanf("%lf", &sigma);
 
     printf("f(x) = %lf", f(x, mi, sigma));

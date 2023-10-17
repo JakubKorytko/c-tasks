@@ -4,32 +4,32 @@
 #include <stdio.h>
 #include <math.h>
 
-double kwadrat() {
+double square() {
     double a;
 
-    printf("\nPodaj bok kwadratu: ");
+    printf("\nEnter the side of the square: ");
     scanf("%lf", &a);
 
     return 4 * a;
 }
 
-double kolo() {
+double circle() {
     double r;
 
-    printf("\nPodaj promien kola: ");
+    printf("\nEnter the radius of the circle: ");
     scanf("%lf", &r);
 
     return M_PI * pow(r, 2);
 }
 
-double trojkat() {
+double triangle() {
     double a;
     double h;
 
-    printf("\nPodaj bok trojkata: ");
+    printf("\nEnter the side of the triangle: ");
     scanf("%lf", &a);
 
-    printf("\nPodaj wysokosc trojkata: ");
+    printf("\nEnter the height of the triangle: ");
     scanf("%lf", &h);
 
     return (1.0 / 2) * a * h;
@@ -39,25 +39,25 @@ int main() {
     int p = 0;
 
     while (p != 4) {
-        printf("\nOblicz pole:\n"
-        "1. Trojkata\n"
-        "2. Kwadratu\n"
-        "3. Kola\n"
-        "4. Koniec\n\n"
-        "(Wpisz odpowiedni numer oraz potwierdz enterem) "
-        "Wybor: ");
+        printf("\nCalculate the field of:\n"
+        "1. Triangle\n"
+        "2. Square\n"
+        "3. Circle\n"
+        "4. Exit\n\n"
+        "(Enter the correct number and confirm with enter) "
+        "Choice: ");
 
         scanf("%d", &p);
 
         if (p == 1) {
-            printf("\nPole trojkata wynosi %lf\n", trojkat());
+            printf("\nThe area of the triangle is %lf\n", triangle());
         } else if (p == 2) {
-            printf("\nPole kwadratu wynosi %lf\n", kwadrat());
+            printf("\nThe area of the square is %lf\n", square());
         } else if (p == 3) {
-            printf("\nPole kola wynosi %lf\n", kolo());
+            printf("\nThe area of the circle is %lf\n", circle());
         } else {
             if (p != 4) {
-                printf("\nWybrano zla opcje");
+                printf("\nWrong choice");
             }
         }
     }

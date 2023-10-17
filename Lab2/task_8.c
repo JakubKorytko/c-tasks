@@ -7,10 +7,10 @@ int main() {
     double a;
     double b;
 
-    printf("Podaj liczbe a: ");
+    printf("Enter the 'a' number: ");
     scanf("%lf", &a);
 
-    printf("Podaj liczbe b: ");
+    printf("Enter the 'b' number: ");
     scanf("%lf", &b);
 
     double min = fmin(a, b);
@@ -18,7 +18,7 @@ int main() {
 
     double percent = min/max*100;
 
-    printf("%.2f stanowi %.2f %% liczby %.2f",
+    printf("%.2f is %.2f %% of the number %.2f",
     min, percent, max);
 
     return 0;

@@ -6,13 +6,14 @@ int main() {
     double a;
     double b;
 
-    printf("Podaj pierwsza liczbe: ");
+    printf("Enter the first number: ");
     scanf("%lf", &a);
 
-    printf("Podaj druga liczbe: ");
+    printf("Enter second number: ");
     scanf("%lf", &b);
 
-    printf("\nIloczyn: %lf\nIloraz: %lf", a*b, a/b);
+    printf("\nProduct: %lf\n"
+    "Quotient: %lf", a*b, a/b);
 
     return 0;
 }

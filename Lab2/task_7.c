@@ -9,21 +9,21 @@ int main() {
 
     while (c != 4) {
         if (c == 3) {
-            printf("Podaj liczbe a: ");
+            printf("Enter the 'a' number: ");
             scanf("%d", &a);
 
-            printf("Podaj liczbe b: ");
+            printf("Enter the 'b' number: ");
             scanf("%d", &b);
         }
 
         printf(
-        "\nOblicz:\n"
+        "\nCalculate:\n"
         "1. a+b\n"
         "2. a-b\n"
-        "3. Zmien liczby\n"
-        "4. Koniec\n\n"
-        "(Wpisz odpowiedni numer oraz potwierdz enterem) "
-        "Wybor: ");
+        "3. Change the numbers\n"
+        "4. Exit\n\n"
+        "(Enter the correct number and confirm with enter) "
+        "Choice: ");
 
         scanf("%d", &c);
 
@@ -33,7 +33,7 @@ int main() {
             printf("\na - b = %d\n", (a - b));
         } else {
             if (c != 4 && c != 3) {
-                printf("Niepoprawny wybor");
+                printf("Incorrect choice");
             }
         }
     }

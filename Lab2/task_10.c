@@ -11,16 +11,16 @@ int main() {
     double x;
     double y;
 
-    printf("Podaj X punktu: ");
+    printf("Enter the X of the point: ");
     scanf("%lf", &x);
 
-    printf("Podaj Y punktu: ");
+    printf("Enter the Y of the point: ");
     scanf("%lf", &y);
 
     if (y > y2(x) && y < y3(x) && y < y1(x)) {
-        printf("Punkt lezy pomiedzy funkcjami");
+        printf("The point is located between the functions");
     } else {
-        printf("Punkt nie lezy miedzy funkcjami");
+        printf("The point is not located between the functions");
     }
 
     return 0;

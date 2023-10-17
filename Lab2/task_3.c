@@ -2,11 +2,11 @@
 
 #include <stdio.h>
 
-double objetosc(double a, double b, double c) {
+double volume(double a, double b, double c) {
     return a*b*c;
 }
 
-double pole(double a, double b, double c) {
+double area(double a, double b, double c) {
     return 2*(a*b+a*c+b*c);
 }
 
@@ -15,17 +15,17 @@ int main() {
     double b;
     double c;
 
-    printf("Podaj a: ");
+    printf("Enter a: ");
     scanf("%lf", &a);
 
-    printf("Podaj b: ");
+    printf("Enter b: ");
     scanf("%lf", &b);
 
-    printf("Podaj c: ");
+    printf("Enter c: ");
     scanf("%lf", &c);
 
-    printf("Objetosc: %lf\n", objetosc(a, b, c));
-    printf("Pole powierzchni calkowitej: %lf\n", pole(a, b, c));
+    printf("Volume: %lf\n", volume(a, b, c));
+    printf("Total surface area: %lf\n", area(a, b, c));
 
     return 0;
 }
