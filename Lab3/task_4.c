@@ -6,7 +6,7 @@
 int main() {
     int x;
 
-    printf("Podaj liczbe do sprawdzenia: ");
+    printf("Enter the number to check: ");
     scanf("%d", &x);
 
     int y = 1;
@@ -18,9 +18,9 @@ int main() {
     }
 
     if (y == 1 && x > 1) {
-        printf("Liczba %d jest liczba pierwsza", x);
+        printf("The number %d is prime", x);
     } else {
-        printf("Liczba %d nie jest liczba pierwsza", x);
+        printf("The number %d is not prime", x);
     }
 
     return 0;

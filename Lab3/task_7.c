@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int nwd(int a, int b) {
+int gcd(int a, int b) {
     if (a == 0 || b == 0) {
         if (a > b) {
             return a;
@@ -15,21 +15,22 @@ int nwd(int a, int b) {
     } else if (a % b == 0) {
         return b;
     } else if (a % b != 0) {
-        return nwd(b, a%b);
+        return gcd(b, a%b);
     }
 }
 
 int main() {
     int x, y;
 
-    printf("Podaj liczby ktorych NWD znalezc\nLiczba a: ");
+    printf("Enter the numbers whose GCD should be found\n"
+    "Number a: ");
     scanf("%d", &x);
-    printf("Liczba b: ");
+    printf("Number b: ");
     scanf("%d", &y);
 
     printf(
-    "NWD(%d, %d) wynosi: %d",
-    x, y, nwd(x, y));
+    "GCD(%d, %d) is equal to: %d",
+    x, y, gcd(x, y));
 
     return 0;
 }

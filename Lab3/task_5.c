@@ -20,10 +20,10 @@ int main() {
         if (y == 0) {
             y++;
         } else {
-        printf("\nSilnia z %d: %d", x, factorial(x));
+        printf("\nFactorial of %d: %d", x, factorial(x));
         }
 
-        printf("\nOblicz silnie z (0 aby zakonczyc): ");
+        printf("\nCalculate the factorial of (0 to exit): ");
         scanf("%d", &x);
     }
 

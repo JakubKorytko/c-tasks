@@ -6,10 +6,10 @@ int main() {
     int x;
     int y = 0;
 
-    printf("Podaj liczbe ktorej dzielniki znalezc: ");
+    printf("Enter the number whose divisors should be found: ");
     scanf("%d", &x);
 
-    printf("\nDzielnikami liczby %d sa: ", x);
+    printf("\nThe divisors of the number %d are: ", x);
 
     for (int i = 1; i <= x; i++) {
         if (x % i == 0) {

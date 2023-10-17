@@ -11,7 +11,7 @@ int main() {
     int res;
 
     while (1) {
-        printf("Podaj ilosc liczb: ");
+        printf("Enter the amount of numbers: ");
         res = scanf("%d", &n);
 
         if (res == 1 && n > 0) {
@@ -22,7 +22,7 @@ int main() {
                 continue;
             }
 
-            printf("\nPodaj liczbe naturalna\n\n");
+            printf("\nEnter a natural number\n\n");
         }
     }
 
@@ -30,7 +30,7 @@ int main() {
     int ar = 0;
 
     for (int i = 0; i < n; i++) {
-        printf("Podaj %d liczbe: ", i+1);
+        printf("Enter the %d number: ", i+1);
         scanf("%d", &m);
         geo *= m;
         ar += m;
@@ -39,8 +39,8 @@ int main() {
     float geo_avg = pow(geo, 1 / (float)n);
     float ar_avg = ar/(float)n;
 
-    printf("Srednia geometryczna: %f, "
-    "arytmetyczna: %f",
+    printf("Geometric mean: %f, "
+    "Arithmetic mean: %f",
     geo_avg, ar_avg);
 
     return 0;

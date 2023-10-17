@@ -15,10 +15,10 @@ int fibonacci(int n) {
 int main() {
     int x;
 
-    printf("Podaj numer wyrazu ciagu fibonacciego: ");
+    printf("Enter the term number of the Fibonacci sequence: ");
     scanf("%d", &x);
 
-    printf("%d wyraz ciagu wynosi: %d", x, fibonacci(x));
+    printf("The %d term of the sequence is: %d", x, fibonacci(x));
 
     return 0;
 }

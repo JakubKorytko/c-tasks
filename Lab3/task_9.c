@@ -5,10 +5,10 @@
 int main() {
     int a, b;
 
-    printf("Podaj a prostokata: ");
+    printf("Enter 'a' of the rectangle: ");
     scanf("%d", &a);
 
-    printf("Podaj b prostokata: ");
+    printf("Enter 'b' of the rectangle: ");
     scanf("%d", &b);
 
     for (int i = 0; i < a; i++) {

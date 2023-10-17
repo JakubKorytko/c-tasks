@@ -4,16 +4,16 @@
 
 int main() {
     int x;
-    int suma;
+    int sum;
 
-    printf("Oblicz sume do: ");
+    printf("Calculate the sum to: ");
     scanf("%d", &x);
 
     for (int i = 0; i <= x; i++) {
-        suma+=i;
+        sum+=i;
     }
 
-    printf("\nSuma jest rowna: %d", suma);
+    printf("\nThe sum is equal to: %d", sum);
 
     return 0;
 }
