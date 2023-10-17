@@ -1,7 +1,8 @@
+// Copyright: 2023 Jakub Korytko
+
 #include <stdio.h>
 
 int main() {
-
     const int size = 10;
 
     int a[size], b[size];
@@ -16,7 +17,7 @@ int main() {
     }
 
     for (int i = 0; i < size; i++) {
-        if (i!=size-1) {
+        if (i != size - 1) {
             printf("%d,", b[i]);
         } else {
             printf("%d", b[i]);

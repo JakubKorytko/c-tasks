@@ -1,7 +1,12 @@
+// Copyright: 2023 Jakub Korytko
+// LINT_C_FILE
+
 #include <stdio.h>
+#include <stdlib.h>
 
-int numberLength(long long int number) {
-
+int numberLength(
+    long long int number  // NOLINT(runtime/int)
+    /* C++ specific warning, but it's a C file*/ ) {
     int length = 0;
 
     while (number != 0) {
@@ -10,12 +15,9 @@ int numberLength(long long int number) {
     }
 
     return length;
-
 }
 
-
 int main() {
-
     int x;
 
     printf("Podaj liczbe: ");
@@ -23,29 +25,30 @@ int main() {
 
     int size = numberLength(x);
 
-    int arr[size];
+    int *arr = (int *)malloc(size * sizeof(int));
+
+    if (!arr) {
+        printf("Failed to allocate memory");
+        exit(1);
+    }
 
     for (int i = 0; i < size; i++) {
-
         arr[i] = x % 10;
 
         x /= 10;
-        
     }
 
     int halfSize = size / 2;
 
-    for (int i = 0; i < halfSize; i++) {
+    char *res_string = "Liczba jest palindromem";
 
+    for (int i = 0; i < halfSize; i++) {
         if (arr[i] != arr[size - i - 1]) {
-            printf("Liczba nie jest palindromem");
-            return 0;
+            res_string = "Liczba nie jest palindromem";
         }
-        
     }
 
-    printf("Liczba jest palindromem");
+    printf("%s", res_string);
 
     return 0;
-
 }
