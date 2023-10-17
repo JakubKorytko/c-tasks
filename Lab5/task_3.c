@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-int multiple(int tab[], int size, int index) {
+int multiple(int arr[], int size, int index) {
     for (int i = index; i < size; i += index) {
-        tab[i] = 1;
+        arr[i] = 1;
     }
     return 0;
 }
@@ -15,45 +15,45 @@ int multiple(int tab[], int size, int index) {
 int main() {
     int n;
 
-    printf("Podaj n przedzialu [2,n]: ");
+    printf("Enter the n of the range [2,n]: ");
     scanf("%d", &n);
 
     int size = n + 1;
 
     if (n > 1) {
-        int *tab = (int *)malloc(size * sizeof(int));
+        int *arr = (int *)malloc(size * sizeof(int));
 
-        if (!tab) {
-            printf("Blad alokacji pamieci");
+        if (!arr) {
+            printf("Failed to allocate memory");
             return 1;
         }
 
         for (int i = 2; i < size; i++) {
-            tab[i] = 0;
+            arr[i] = 0;
         }
 
         for (int i = 2; i <= sqrt(n); i++) {
-            if (tab[i] == 0) {
+            if (arr[i] == 0) {
                 for (int j = 2*i; j < size; j += i) {
-                    tab[j] = 1;
+                    arr[j] = 1;
                 }
             }
         }
 
-        printf("Liczby pierwsze z przedzialu [2,%d]: ", n);
+        printf("Prime numbers in the range [2,%d]: ", n);
 
         for (int i = 2; i < size; i++) {
-            if (tab[i] == 0) {
+            if (arr[i] == 0) {
                 printf("%d ", i);
             }
         }
 
-        if (tab) {
-            free(tab);
+        if (arr) {
+            free(arr);
         }
 
     } else {
-        printf("Podano n mniejsze niz 2");
+        printf("Given 'n' is less than 2");
     }
 
     return 0;

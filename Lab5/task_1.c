@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ROZWIAZANIE METODA DOPELNIEN ALGEBRAICZNYCH (funkcja dop)
+// SOLUTION USING ADJUGATE MATRIX METHOD (adj function)
 
 double det3(double A[4][4]) {
     double result = 0;
@@ -28,7 +28,7 @@ double det2(double A[3][3]) {
     return result;
 }
 
-int dop(double A[4][4], int row, int col) {
+int adj(double A[4][4], int row, int col) {
     double result = 0;
 
     double B[3][3];
@@ -107,9 +107,9 @@ void showMatrix(double matrix[4][4]) {
 int main() {
     double A[4][4];
     double B[4][4];
-    // bo indeksujemy od 1
+    // because we start indexing from 1
 
-    printf("\nPodaj elementy macierzy 3x3 (9 liczb): \n");
+    printf("\nEnter the elements of a 3x3 matrix (9 numbers): \n");
 
     for (int i = 1; i < 4; i++) {
         for (int j = 1; j < 4; j++) {
@@ -122,7 +122,7 @@ int main() {
     if (det != 0) {
         for (int i = 1; i < 4; i++) {
             for (int j = 1; j < 4; j++) {
-                B[j][i] = dop(A, i, j);
+                B[j][i] = adj(A, i, j);
             }
         }
 
@@ -132,14 +132,14 @@ int main() {
             }
         }
 
-        printf("\nMacierza odwrotna do macierzy:\n\n");
+        printf("\nThe inverse of the matrix:\n\n");
         showMatrix(A);
 
-        printf("\nJest macierz:\n\n");
+        printf("\nis the matrix::\n\n");
         showMatrix(B);
 
     } else {
-        printf("Macierz nie jest odwracalna");
+        printf("The matrix is not invertible");
         return 0;
     }
 

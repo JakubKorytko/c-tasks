@@ -60,13 +60,13 @@ void showMatrix(int **matrix, int rows, int cols) {
 int main() {
     int A_size[2], B_size[2];
 
-    printf("Podaj ilosc wierszy macierzy A "
-    "(i tym samym ilosc kolumn macierzy B): ");
+    printf("Enter the number of rows of matrix A "
+    "(and thus the number of columns of matrix B): ");
 
     scanf("%d", &A_size[0]);
 
-    printf("Podaj ilosc kolumn macierzy A "
-    "(i tym samym ilosc wierszy macierzy B: ");
+    printf("Enter the number of columns of matrix A "
+    "(and thus the number of rows of matrix B: ");
 
     scanf("%d", &A_size[1]);
 
@@ -78,7 +78,7 @@ int main() {
 
     B_size[0]++;
     B_size[1]++;
-    // bo indeksujemy od 1
+    // because we start indexing from 1
 
     int **A = malloc(A_size[0] * sizeof *A);
     int **B = malloc(B_size[0] * sizeof *B);
@@ -86,7 +86,8 @@ int main() {
     int elements[2] = { (A_size[0] - 1) * (A_size[1] - 1),
     (B_size[0] - 1) * (B_size[1] - 1) };
 
-    printf("\nPodaj elementy macierzy (%d liczb) A: \n", elements[0]);
+    printf("\nEnter the elements of the matrix (%d numbers) A: \n",
+    elements[0]);
 
     for (int i = 1; i < A_size[0]; i++) {
         A[i] = malloc(A_size[1] * sizeof(*A[i]));
@@ -95,7 +96,8 @@ int main() {
         }
     }
 
-    printf("Podaj elementy macierzy (%d liczb) B: \n", elements[1]);
+    printf("Enter the elements of the matrix (%d numbers) B: \n",
+    elements[1]);
 
     for (int i = 1; i < B_size[0]; i++) {
         B[i] = malloc(B_size[1] * sizeof(*B[i]));
@@ -104,10 +106,10 @@ int main() {
         }
     }
 
-    printf("\nMacierz A:\n\n");
+    printf("\nMatrix A:\n\n");
     showMatrix(A, A_size[0], A_size[1]);
 
-    printf("\nMacierz B:\n\n");
+    printf("\nMatrix B:\n\n");
     showMatrix(B, B_size[0], B_size[1]);
 
     if (A_size[1] == B_size[0]) {
@@ -119,10 +121,10 @@ int main() {
             }
         }
 
-        printf("\nIloczyn A i B: \n\n");
+        printf("\nThe product of A and B: \n\n");
         showMatrix(C, A_size[0], B_size[1]);
     } else {
-        printf("\nNie mozna wykonac mnozenia macierzy");
+        printf("\nCannot perform matrix multiplication");
     }
 
     return 0;
