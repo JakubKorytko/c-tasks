@@ -1,7 +1,8 @@
+// Copyright: 2023 Jakub Korytko
+
 #include <stdio.h>
 
 int main() {
-
     FILE *fp;
     fp = fopen("zad3-5_DATA.txt", "r");
 
