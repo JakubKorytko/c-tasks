@@ -5,6 +5,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+void free_array(char **arr, int size) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i]) {
+            free(arr[i]);
+        }
+    }
+    if (arr) {
+        free(arr);
+    }
+}
+
 int findModulo(int *arr, int size) {
     int matches[5] = {1, 1, 1, 1, 1};
     int primeNumbers[5] = {127, 131, 137, 139, 149};
@@ -38,24 +49,30 @@ int main() {
 
     scanf("%d", &t);
 
-    char words[t][25];
+    char **words = (char **)malloc(t * sizeof(char *));
+
+    if (!words) {
+        printf("Failed to allocate memory");
+        exit(1);
+    }
+
+    for (int i = 0; i < t; i++) {
+        words[i] = (char *)malloc(25 * sizeof(char));
+
+        if (!words[i]) {
+            printf("Failed to allocate memory");
+            free_array(words, i);
+            exit(1);
+        }
+    }
 
     int *dividers = (int *)malloc(t * sizeof(int));
 
     if (!dividers) {
         printf("Failed to allocate memory");
+        free_array(words, t);
         exit(1);
     }
-
-    // if (t>25 || t<0) {
-    //     printf("Wrong number of strings
-    //     (cannot be negative or greater than 25)");
-    // }
-
-    // if (s>25 || s<0) {
-    //     printf("Wrong number of letters
-    //     (cannot be negative or greater than 25)");
-    // }
 
     for (int i = 0; i < t; i++) {
         int s;
@@ -65,6 +82,12 @@ int main() {
 
         if (!arr) {
             printf("Failed to allocate memory");
+            free_array(words, t);
+
+            if (dividers) {
+                free(dividers);
+            }
+
             exit(1);
         }
 
@@ -104,6 +127,8 @@ int main() {
     if (dividers) {
         free(dividers);
     }
+
+    free_array(words, t);
 
     return 1;
 }
