@@ -3,10 +3,6 @@
 #include <stdio.h>
 #include <math.h>
 
-// +-----------+
-// | Project L |
-// +-----------+
-
 int sum(int x) {
     int s = 0;
     int l = x;

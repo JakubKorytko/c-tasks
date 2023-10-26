@@ -4,10 +4,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-// +-----------+
-// | Project N |
-// +-----------+
-
 int multiplicateRow(int **A, int **B, int row, int col, int size) {
     int result = 0;
     for (int i = 1; i < size; i++) {
@@ -71,8 +67,7 @@ int main() {
     printf("Enter the number of columns of the matrix A: ");
     scanf("%d", &A_size[1]);
 
-    // "In task N, the program should multiply matrices of any size,
-    // if possible"
+    // "The program should multiply matrices of any size, if possible"
     // for this reason, we take the sizes of matrix B separately
 
     printf("\nEnter the number of rows of the matrix B: ");

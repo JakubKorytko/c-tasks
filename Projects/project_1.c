@@ -3,10 +3,6 @@
 #include <stdio.h>
 #include <math.h>
 
-// +----------------+
-// | Project No. 17 |
-// +----------------+
-
 double series(double x) {
     double s = 1, w = 1;
     for (int i = 1; i <= 100; i++) {
