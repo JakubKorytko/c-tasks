@@ -152,11 +152,11 @@ int main() {
     char b[100];
     char ch[100] = {};
 
-    printf("Enter the components of the sum "
+    printf("Enter two components of the sum "
     "separated by a space in the Roman system "
     "from the range <1, 1000> ");
 
-    scanf("%s %s", &a, &b);
+    scanf("%s %s", a, b);
 
     if (isValid(a) == -1 || isValid(b) == -1) {
         printf("\nA number was entered in the wrong format");

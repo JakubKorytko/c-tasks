@@ -25,7 +25,7 @@ LL power(LL base, LL exp, LL mod) {
 }
 
 int main() {
-    unsigned int seed = time(NULL);
+    srand(time(NULL));
 
     LL k, n;
     printf("Provide test accuracy: ");
@@ -58,7 +58,9 @@ int main() {
     LL d = n / pw;
 
     for (LL i = 0; i < k; i++) {
-        LL a = (rand_r(&seed) % (n - 2)) + 2;
+        // we don't need a cryptographically secure random number
+        // NOLINTNEXTLINE(runtime/threadsafe_fn)
+        LL a = (rand() % (n - 2)) + 2;
         LL x = power(a, d, n);
 
         if (x != 1) {
