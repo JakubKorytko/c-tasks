@@ -3,20 +3,20 @@
 #include <stdio.h>
 
 int main() {
-    int a;
-    int b;
-    int c = 3;
+  int a;
+  int b;
+  int c = 3;
 
-    while (c != 4) {
-        if (c == 3) {
-            printf("Enter the 'a' number: ");
-            scanf("%d", &a);
+  while (c != 4) {
+    if (c == 3) {
+      printf("Enter the 'a' number: ");
+      scanf("%d", &a);
 
-            printf("Enter the 'b' number: ");
-            scanf("%d", &b);
-        }
+      printf("Enter the 'b' number: ");
+      scanf("%d", &b);
+    }
 
-        printf(
+    printf(
         "\nCalculate:\n"
         "1. a+b\n"
         "2. a-b\n"
@@ -25,18 +25,18 @@ int main() {
         "(Enter the correct number and confirm with enter) "
         "Choice: ");
 
-        scanf("%d", &c);
+    scanf("%d", &c);
 
-        if (c == 1) {
-            printf("\na + b = %d\n", (a + b));
-        } else if (c == 2) {
-            printf("\na - b = %d\n", (a - b));
-        } else {
-            if (c != 4 && c != 3) {
-                printf("Incorrect choice");
-            }
-        }
+    if (c == 1) {
+      printf("\na + b = %d\n", (a + b));
+    } else if (c == 2) {
+      printf("\na - b = %d\n", (a - b));
+    } else {
+      if (c != 4 && c != 3) {
+        printf("Incorrect choice");
+      }
     }
+  }
 
-    return 0;
+  return 0;
 }

@@ -3,26 +3,26 @@
 #include <stdio.h>
 
 int main() {
-    const int size = 10;
+  const int size = 10;
 
-    int a[size], b[size];
+  int a[size], b[size];
 
-    for (int i = 0; i < size; i++) {
-        printf("Enter the %d element of the array: ", i+1);
-        scanf("%d", &a[i]);
+  for (int i = 0; i < size; i++) {
+    printf("Enter the %d element of the array: ", i + 1);
+    scanf("%d", &a[i]);
+  }
+
+  for (int i = 0; i < size; i++) {
+    b[i] = a[i];
+  }
+
+  for (int i = 0; i < size; i++) {
+    if (i != size - 1) {
+      printf("%d,", b[i]);
+    } else {
+      printf("%d", b[i]);
     }
+  }
 
-    for (int i = 0; i < size; i++) {
-        b[i] = a[i];
-    }
-
-    for (int i = 0; i < size; i++) {
-        if (i != size - 1) {
-            printf("%d,", b[i]);
-        } else {
-            printf("%d", b[i]);
-        }
-    }
-
-    return 0;
+  return 0;
 }

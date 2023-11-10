@@ -3,16 +3,16 @@
 #include <stdio.h>
 
 int main() {
-    int a;
+  int a;
 
-    printf("Enter the number: ");
-    scanf("%d", &a);
+  printf("Enter the number: ");
+  scanf("%d", &a);
 
-    if (a%2 == 0) {
-        printf("Even");
-    } else {
-        printf("Odd");
-    }
+  if (a % 2 == 0) {
+    printf("Even");
+  } else {
+    printf("Odd");
+  }
 
-    return 0;
+  return 0;
 }

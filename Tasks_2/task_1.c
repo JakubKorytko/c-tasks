@@ -3,17 +3,17 @@
 #include <stdio.h>
 
 int main() {
-    int x;
-    int sum;
+  int x;
+  int sum;
 
-    printf("Calculate the sum to: ");
-    scanf("%d", &x);
+  printf("Calculate the sum to: ");
+  scanf("%d", &x);
 
-    for (int i = 0; i <= x; i++) {
-        sum+=i;
-    }
+  for (int i = 0; i <= x; i++) {
+    sum += i;
+  }
 
-    printf("\nThe sum is equal to: %d", sum);
+  printf("\nThe sum is equal to: %d", sum);
 
-    return 0;
+  return 0;
 }
