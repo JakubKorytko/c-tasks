@@ -6,7 +6,7 @@ out_dir = out
 
 .PHONY: all clean tasks_1 tasks_2 tasks_3 tasks_4 tasks_5 tasks_6 projects
 
-all: make_out_dirs compile_all
+all: compile_all
 
 make_out_dirs:
 	@mkdir -p $(out_dir)
@@ -28,7 +28,7 @@ $(out_dir)/$(data_file): $(data_file)
 	@cp $(data_file) $@
 	@echo "Done!"
 
-compile_all: $(patsubst %.c, $(out_dir)/%, $(tasks)) $(out_dir)/$(data_file) $(patsubst %.c, $(out_dir)/%, $(projects))
+compile_all: make_out_dirs $(patsubst %.c, $(out_dir)/%, $(tasks)) $(out_dir)/$(data_file) $(patsubst %.c, $(out_dir)/%, $(projects))
 
 tasks_1: make_out_dirs $(patsubst %.c, $(out_dir)/%, $(wildcard Tasks_1/task_*.c))
 tasks_2: make_out_dirs $(patsubst %.c, $(out_dir)/%, $(wildcard Tasks_2/task_*.c))
