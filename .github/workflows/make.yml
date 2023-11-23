@@ -1,5 +1,5 @@
 ---
-name: Run make to check for errors
+name: Run make targets to check for errors
 
 # in quotes to avoid YAMLLint thinking it's a boolean
 "on": push
@@ -14,5 +14,7 @@ jobs:
       - name: Install make
         run: sudo apt-get install make
 
-      - name: Run make
-        run: make
+      - name: Run make targets
+        run: |
+          make
+          make clean
